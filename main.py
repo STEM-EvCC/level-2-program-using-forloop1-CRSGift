@@ -17,12 +17,8 @@ success_rate = (missions_successful_quantity/missions_quantity)*100
 print("Success rate: "+str(round(success_rate, 2))+"%")
 
 #Lists all the missions that were launched before the year 2000
-
-#Creates the list
 missions_pre2000 = []
 for year in range(len(mission_years)):
-    if year < 2000:
+    if mission_years[year] < 2000:
         missions_pre2000.append(mission_names[year])
-#Prints the list
-for mission in missions_pre2000:
-    print("- "+str(mission))
+print("Missions launched before the year 2000:\n- "+"\n- ".join(missions_pre2000))
